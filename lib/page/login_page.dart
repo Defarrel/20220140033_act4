@@ -21,17 +21,21 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Form(
         key: _formKey,
-        child: Column(
-          children: [
-            TextFormField(
-              controller: emailController,
-              decoration: const InputDecoration(labelText: 'Email'),
-            ),
-            TextFormField(
-              controller: passwordController,
-              decoration: const InputDecoration(labelText: 'Password'),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextFormField(
+                controller: emailController,
+                decoration: const InputDecoration(labelText: 'Email'),
+              ),
+              TextFormField(
+                controller: passwordController,
+                decoration: const InputDecoration(labelText: 'Password'),
+              ),
+            ],
+          ),
         ),
       ),
     );
