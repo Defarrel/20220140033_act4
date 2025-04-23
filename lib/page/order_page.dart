@@ -27,7 +27,57 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Order Page')),
-      body: Form(child: Column(spacing: 16, children: [])),
+      body: Form(
+        child: Column(
+          spacing: 16,
+          children: [
+            TextFormField(
+              controller: makananController,
+              decoration: const InputDecoration(labelText: 'Food Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your food order';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: minumanController,
+              decoration: const InputDecoration(labelText: 'Drink Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your drink order';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: jumlahMakananController,
+              decoration: const InputDecoration(
+                labelText: 'Food Quantity Order',
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your food quantity';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: jumlahMinumanController,
+              decoration: const InputDecoration(
+                labelText: 'Drink Quantity Order',
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your drink quantity';
+                }
+                return null;
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
