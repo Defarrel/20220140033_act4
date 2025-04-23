@@ -94,7 +94,7 @@ class _OrderPageState extends State<OrderPage> {
                     ),
                   );
                 }
-              },
+              },child: Text('Order Now')  ,
             ),
           ],
         ),
