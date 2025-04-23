@@ -22,8 +22,12 @@ class _OrderPageState extends State<OrderPage> {
       totalHarga = (jumlahMakanan * 32000) + (jumlahMinuman * 5000);
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: const Text('Order Page')),
+      body: Form(child: Column(spacing: 16, children: [])),
+    );
   }
 }
