@@ -45,19 +45,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   return null;
                 },
               ),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomePage(),
-                      ),
-                    );
-                  }
-                },
-                child: const Text('Login'),
-              ),
+              ElevatedButton(onPressed: () {}, child: const Text('Register')),
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -68,7 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   );
                 },
                 child: const Text('Sudah punya akun? Login Sekarang!'),
-              )
+              ),
             ],
           ),
         ),
